@@ -1,0 +1,63 @@
+# Spacewalks Python Example Project
+
+> [!NOTE]
+> This template is the example code for the [Byte-Sized RSE: Software Packaging with uv](https://github.com/softwaresaved/byte-sized-rse-software-packaging-uv) lesson.
+
+## Overview
+
+This is an example Python project used for teaching.
+
+It contains spacewalks analysis tool (`eva_data_analysis.py`) for researchers to generate visualisations and statistical summaries of NASA's extravehicular activity dataset (`./data/eva_data.json`).
+
+## Features
+Key features of spacewalks:
+
+- Generates a CSV table of summary statistics of extravehicular activity crew sizes
+- Generates a line plot to show the cumulative duration of space walks over time
+
+## Pre-requisites
+
+Spacewalks was developed using Python version 3.12.
+
+To install and run Spacewalks you will need have Python3 installed.
+You will also need the following libraries (minimum versions in brackets):
+
+- [NumPy](https://www.numpy.org/) >=2.0.0 - Spacewalk's test suite uses NumPy's statistical functions
+- [Matplotlib](https://matplotlib.org/stable/index.html) >=3.0.0  - Spacewalks uses Matplotlib to make plots
+- [pytest](https://docs.pytest.org/en/8.2.x/#) >=8.2.0  - Spacewalks uses Pytest for testing
+- [pandas](https://pandas.pydata.org/) >= 2.2.0 - Spacewalks uses Pandas for data frame manipulation
+
+## Installation instructions
+
+- Clone the Spacewalks repository to your local machine using Git.
+If you don't have Git installed, you can download it from the official Git website.
+
+```
+git clone https://github.com/your-repository-url/spacewalks.git
+cd spacewalks
+```
+
+- Install the necessary dependencies:
+```
+python3 -m pip install -r requirements.txt
+```
+
+- To ensure everything is working correctly, run the tests using Pytest.
+
+```
+python3 -m pytest
+```
+
+## Usage example
+
+To run an analysis using the `eva_data_analysis.py` script from the command line terminal, do:
+
+```
+# Usage Examples
+python3 eva_data_analysis.py data/eva-data.json results/eva-data.csv
+```
+
+The first argument is path to the JSON data file.
+The second argument is the path the CSV output file.
+
+If the code runs successfully, you should get the resulting plot in `results/cumulative_eva_graph.png`
